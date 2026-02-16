@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pescheria La Fontanella - Palermo | Molto più di una Pescheria</title>
+    <meta name="description" content="Storica Pescheria La Fontanella a Palermo. Dal 1969, pesce fresco, laboratorio culinario, pranzi in pescheria e aperifish.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-['Poppins'] bg-[#f5f5f2] text-slate-900">
+
+    <header class="w-full z-50 bg-white shadow-sm border-b border-slate-100">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-['Playfair_Display'] font-bold text-blue-900">
+                La Fontanella
+            </a>
+            
+            <button id="menu-toggle" class="lg:hidden text-2xl text-blue-900">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden lg:flex space-x-8 font-semibold text-sm uppercase tracking-wider">
+                <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#chi-siamo" class="hover:text-blue-600 transition">Chi Siamo</a></li>
+                <li><a href="#servizi" class="hover:text-blue-600 transition">Servizi</a></li>
+                <li><a href="#laboratorio" class="hover:text-blue-600 transition">Laboratorio</a></li>
+                <li><a href="#contatti" class="hover:text-blue-600 transition">Contatti</a></li>
+            </ul>
+
+            <a href="tel:+39091474630" class="hidden lg:block border border-blue-900 text-blue-900 px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white transition">
+                Chiama Ora
+            </a>
+        </nav>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 p-4 absolute w-full shadow-lg">
+            <ul class="flex flex-col space-y-4 font-semibold">
+                <li><a href="#home" class="block py-2">Home</a></li>
+                <li><a href="#chi-siamo" class="block py-2">Chi Siamo</a></li>
+                <li><a href="#servizi" class="block py-2">Servizi</a></li>
+                <li><a href="#laboratorio" class="block py-2">Laboratorio</a></li>
+                <li><a href="#contatti" class="block py-2">Contatti</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home" class="relative bg-white">
+        <div class="container mx-auto px-4 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+            <div class="order-2 lg:order-1">
+                <p class="text-sm tracking-[0.25em] uppercase text-blue-700 mb-3">Pescheria · Cucina · Aperifish</p>
+                <h1 class="text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4 text-slate-900">
+                    Molto più di una pescheria, dal 1969.
+                </h1>
+                <p class="text-base md:text-lg text-slate-600 mb-6 max-w-xl">
+                    Pesce freschissimo, piatti pronti dalla nostra cucina e un aperitivo sul mare
+                    alla periferia di Palermo, in uno storico luogo di famiglia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="#servizi" class="inline-flex items-center justify-center bg-blue-900 text-white px-7 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-blue-800 transition">
+                        I nostri servizi
+                    </a>
+                    <a href="#contatti" class="inline-flex items-center justify-center border border-slate-300 text-slate-800 px-7 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-slate-100 transition">
+                        Come arrivare
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="relative rounded-3xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=1200" alt="Banco del pesce fresco" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                        <p class="text-sm text-slate-100">
+                            Ogni mattina selezioniamo il meglio del mare per i nostri clienti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chi-siamo" class="py-16 bg-[#f5f5f2]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1534080564607-c987d6666f00?auto=format&fit=crop&q=80&w=1000" alt="Tradizione Pescheria" class="rounded-3xl shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">La nostra storia</h2>
+                    <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-5 text-slate-900">Una tradizione di famiglia dal 1969</h3>
+                    <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
+                        Alle porte a Sud Est della città di Palermo sorge la storica Pescheria “La Fontanella”: fondata nel 1969, si trova un tempo scenario dei famosissimi “Bagni Virzì”, in quel di Romagnolo. 
+                    </p>
+                    <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
+                        La pescheria deve il suo nome alle storiche “fontanelle” in ghisa che, un tempo, erogavano acqua potabile proprio nelle vicinanze di questo luogo impregnato di storia e passione. La tradizione storica della famiglia Richichi si fonde con il piacere della modernità.
+                    </p>
+                    <div class="mt-6 rounded-2xl bg-white border border-slate-200 px-5 py-4">
+                        <p class="italic text-slate-700 text-sm md:text-base">
+                            "A questo tonno, di voto, da zero a dieci, do quattordici! È pazzesco!"
+                        </p>
+                        <p class="font-semibold not-italic text-xs md:text-sm text-slate-500 mt-2">— Oscar Farinetti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servizi" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Cosa facciamo</h2>
+            <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-12 text-slate-900">I servizi della Fontanella</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3 text-slate-900">Pescheria</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Il meglio del mare ogni giorno, con una selezione accurata di pesce fresco.</p>
+                </div>
+                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3 text-slate-900">Laboratorio</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Piatti pronti e preparati di pesce da portare a casa, cucinati ogni mattina.</p>
+                </div>
+                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3 text-slate-900">Pranzo in pescheria</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Tavolini apparecchiati tra i profumi del mare, per un pranzo informale ma curato.</p>
+                </div>
+                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3 text-slate-900">Aperifish</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Dalle 19, finger food di mare e fritti croccanti con vini siciliani selezionati.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="laboratorio" class="py-16 bg-[#f5f5f2] overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&q=80&w=1000" alt="Preparati di pesce" class="rounded-3xl shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Gusto e comodità</h2>
+                    <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-5 text-slate-900">Il laboratorio di cucina</h3>
+                    <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
+                        Non è solo pesce fresco. Nel nostro laboratorio trasformiamo la materia prima in delizie pronte da gustare a casa vostra. Caponata di pesce spada, insalate di mare, e tante altre specialità preparate con amore ogni mattina.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check-circle text-blue-600 mr-3"></i> Ingredienti 100% freschi
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check-circle text-blue-600 mr-3"></i> Ricette della tradizione siciliana
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <i class="fas fa-check-circle text-blue-600 mr-3"></i> Pronti da cuocere o da gustare
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-14 bg-blue-900 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-6">Vuoi prenotare un tavolo per pranzo?</h2>
+            <p class="text-xl mb-8 opacity-90">Chiamaci per assicurarti il tuo posto a sedere!</p>
+            <a href="tel:+39091474630" class="bg-white text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-slate-100 transition inline-block">
+                <i class="fas fa-phone mr-2"></i> 091 474630
+            </a>
+        </div>
+    </section>
+
+    <section id="contatti" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Dove trovarci</h2>
+                    <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-8 text-slate-900">Contatti e orari</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-blue-600 text-xl mr-4 mt-1"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4 class="font-bold">Indirizzo</h4>
+                                <p class="text-slate-600">Via Messina Marine, 287, 90123 Palermo (PA)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-600 text-xl mr-4 mt-1"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4 class="font-bold">Telefono</h4>
+                                <p class="text-slate-600">091 474630 / 393 3310716</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-600 text-xl mr-4 mt-1"><i class="fab fa-instagram"></i></div>
+                            <div>
+                                <h4 class="font-bold">Instagram</h4>
+                                <a href="https://www.instagram.com/pescherialafontanella/" class="text-blue-600 hover:underline">@pescherialafontanella</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-600 text-xl mr-4 mt-1"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4 class="font-bold">Orari di Apertura</h4>
+                                <p class="text-slate-600">Pescheria: 07:30 - 14:00</p>
+                                <p class="text-slate-600">Pranzo: 12:00 - 14:30</p>
+                                <p class="text-slate-600">Aperifish: dalle 19:00 (Ven-Sab)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] bg-slate-100 rounded-2xl overflow-hidden border border-slate-200">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3139.5073281766363!2d13.386248775485443!3d38.10513007190395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319e5bb6b03e5b5%3A0xd0034225c86af46b!2sPescheria%20La%20Fontanella!5e0!3m2!1sit!2sit!4v1771232780468!5m2!1sit!2sit"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white text-slate-500 py-8 border-t border-slate-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-['Playfair_Display'] font-bold text-slate-900 mb-3">La Fontanella</h2>
+            <p class="mb-6 max-w-md mx-auto text-sm">Il gusto autentico del mare siciliano, servito con passione dal 1969.</p>
+            <div class="flex justify-center space-x-6 mb-6 text-slate-500">
+                <a href="#" class="hover:text-slate-800 transition text-xl"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/pescherialafontanella/" class="hover:text-slate-800 transition text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-slate-800 transition text-xl"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="text-xs md:text-sm border-t border-slate-200 pt-4 flex flex-col md:flex-row items-center justify-center gap-2">
+                <span>&copy; 2024 Pescheria La Fontanella. Tutti i diritti riservati.</span>
+                <span class="hidden md:inline mx-2 text-slate-300">•</span>
+                <span class="text-slate-500">
+                    Web by
+                    <a href="https://www.instagram.com/_matteomarino/" target="_blank" rel="noopener noreferrer" class="text-slate-800 hover:text-blue-700 font-medium">
+                        Matteo Marino
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
