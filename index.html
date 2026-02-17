@@ -47,34 +47,28 @@
         </div>
     </header>
 
-    <section id="home" class="relative bg-white">
-        <div class="container mx-auto px-4 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
-            <div class="order-2 lg:order-1">
-                <p class="text-sm tracking-[0.25em] uppercase text-blue-700 mb-3">Pescheria · Cucina · Aperifish</p>
-                <h1 class="text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4 text-slate-900">
+    <section id="home" class="relative bg-slate-900 text-white">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=1600" alt="Banco del pesce fresco" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/55"></div>
+        </div>
+        <div class="relative">
+            <div class="container mx-auto px-4 py-24 lg:py-32 flex flex-col items-center text-center">
+                <p class="text-xs md:text-sm tracking-[0.35em] uppercase text-blue-100 mb-4">Pescheria · Cucina · Aperifish</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-['Playfair_Display'] font-bold mb-5 max-w-3xl">
                     Molto più di una pescheria, dal 1969.
                 </h1>
-                <p class="text-base md:text-lg text-slate-600 mb-6 max-w-xl">
+                <p class="text-base md:text-lg text-slate-100/90 mb-8 max-w-2xl">
                     Pesce freschissimo, piatti pronti dalla nostra cucina e un aperitivo sul mare
                     alla periferia di Palermo, in uno storico luogo di famiglia.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3">
-                    <a href="#servizi" class="inline-flex items-center justify-center bg-blue-900 text-white px-7 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-blue-800 transition">
+                    <a href="#servizi" class="inline-flex items-center justify-center bg-blue-900 text-white px-8 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-blue-800 transition">
                         I nostri servizi
                     </a>
-                    <a href="#contatti" class="inline-flex items-center justify-center border border-slate-300 text-slate-800 px-7 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-slate-100 transition">
+                    <a href="#contatti" class="inline-flex items-center justify-center bg-white/10 border border-white/40 text-white px-8 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-white/20 transition">
                         Come arrivare
                     </a>
-                </div>
-            </div>
-            <div class="order-1 lg:order-2">
-                <div class="relative rounded-3xl overflow-hidden shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=1200" alt="Banco del pesce fresco" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                        <p class="text-sm text-slate-100">
-                            Ogni mattina selezioniamo il meglio del mare per i nostri clienti.
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -107,66 +101,100 @@
     </section>
 
     <section id="servizi" class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Cosa facciamo</h2>
-            <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-12 text-slate-900">I servizi della Fontanella</h3>
-            
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Cosa facciamo</h2>
+                <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-4 text-slate-900">I servizi della Fontanella</h3>
+                <p class="text-sm md:text-base text-slate-600">
+                    Dalla scelta del pesce al piatto in tavola: quattro modi diversi di vivere il mare.
+                </p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                        <i class="fas fa-fish"></i>
+                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left hover:shadow-md hover:-translate-y-1 transition-transform transition-shadow duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700 mb-1">01 · Pescheria</p>
+                            <h4 class="text-lg font-semibold text-slate-900">Il banco del pesce</h4>
+                        </div>
                     </div>
-                    <h4 class="text-lg font-semibold mb-3 text-slate-900">Pescheria</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Il meglio del mare ogni giorno, con una selezione accurata di pesce fresco.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Selezione quotidiana di pesce fresco, consigli su tagli, cotture e abbinamenti.</p>
                 </div>
-                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                        <i class="fas fa-utensils"></i>
+                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left hover:shadow-md hover:-translate-y-1 transition-transform transition-shadow duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700 mb-1">02 · Laboratorio</p>
+                            <h4 class="text-lg font-semibold text-slate-900">Cucina di mare pronta</h4>
+                        </div>
                     </div>
-                    <h4 class="text-lg font-semibold mb-3 text-slate-900">Laboratorio</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Piatti pronti e preparati di pesce da portare a casa, cucinati ogni mattina.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Preparati e piatti pronti di pesce, cucinati ogni mattina nel nostro laboratorio.</p>
                 </div>
-                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                        <i class="fas fa-chair"></i>
+                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left hover:shadow-md hover:-translate-y-1 transition-transform transition-shadow duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
+                            <i class="fas fa-chair"></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700 mb-1">03 · Pranzo</p>
+                            <h4 class="text-lg font-semibold text-slate-900">Pranzo in pescheria</h4>
+                        </div>
                     </div>
-                    <h4 class="text-lg font-semibold mb-3 text-slate-900">Pranzo in pescheria</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Tavolini apparecchiati tra i profumi del mare, per un pranzo informale ma curato.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Tavoli apparecchiati tra i profumi del mare, per un pranzo informale ma curato.</p>
                 </div>
-                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left">
-                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                        <i class="fas fa-glass-cheers"></i>
+                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left hover:shadow-md hover:-translate-y-1 transition-transform transition-shadow duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700 mb-1">04 · Aperifish</p>
+                            <h4 class="text-lg font-semibold text-slate-900">Aperitivo di mare</h4>
+                        </div>
                     </div>
-                    <h4 class="text-lg font-semibold mb-3 text-slate-900">Aperifish</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Dalle 19, finger food di mare e fritti croccanti con vini siciliani selezionati.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Finger food, crudi e fritti croccanti accompagnati da una selezione di vini siciliani.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="laboratorio" class="py-16 bg-[#f5f5f2] overflow-hidden">
+    <section id="laboratorio" class="py-16 bg-[#f5f5f2]">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-                <div class="lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&q=80&w=1000" alt="Preparati di pesce" class="rounded-3xl shadow-lg">
-                </div>
-                <div class="lg:w-1/2">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
                     <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Gusto e comodità</h2>
                     <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-5 text-slate-900">Il laboratorio di cucina</h3>
                     <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
-                        Non è solo pesce fresco. Nel nostro laboratorio trasformiamo la materia prima in delizie pronte da gustare a casa vostra. Caponata di pesce spada, insalate di mare, e tante altre specialità preparate con amore ogni mattina.
+                        Nel nostro laboratorio trasformiamo il pescato del giorno in piatti pronti, curati come al ristorante ma pensati per casa tua.
                     </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mr-3"></i> Ingredienti 100% freschi
-                        </li>
-                        <li class="flex items-center text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mr-3"></i> Ricette della tradizione siciliana
-                        </li>
-                        <li class="flex items-center text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mr-3"></i> Pronti da cuocere o da gustare
-                        </li>
-                    </ul>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white rounded-2xl border border-slate-200 p-4">
+                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 mb-2">Preparati di mare</p>
+                            <p class="text-sm text-slate-700">Caponata di pesce spada, insalate di mare e secondi già pronti.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-slate-200 p-4">
+                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 mb-2">Pronti da cuocere</p>
+                            <p class="text-sm text-slate-700">Involtini, gratinati e specialità che vanno solo in forno.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-slate-200 p-4">
+                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 mb-2">Qualità quotidiana</p>
+                            <p class="text-sm text-slate-700">Ingredienti freschi, ricette di famiglia, lavorazione artigianale.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-slate-200 p-4">
+                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 mb-2">Zero pensieri</p>
+                            <p class="text-sm text-slate-700">Tu apparecchi, al resto pensiamo noi.</p>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-500 uppercase tracking-[0.2em]">Ogni mattina, tutto preparato sul momento.</p>
+                </div>
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&q=80&w=1000" alt="Preparati di pesce" class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
         </div>
