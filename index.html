@@ -1,292 +1,439 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pescheria La Fontanella - Palermo | Molto più di una Pescheria</title>
-    <meta name="description" content="Storica Pescheria La Fontanella a Palermo. Dal 1969, pesce fresco, laboratorio culinario, pranzi in pescheria e aperifish.">
+    <title>Pescheria La Fontanella - Palermo | Eccellenza del Mare</title>
+    <meta name="description"
+        content="Storica Pescheria La Fontanella a Palermo. Dal 1969, pesce fresco, laboratorio culinario, pranzi in pescheria e aperifish.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlue: '#0e3c63',
+                        oceanBlue: '#38b6ff',
+                        lightBlue: '#f0f9ff',
+                        slate: {
+                            850: '#1e293b',
+                        }
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        poppins: ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-['Poppins'] bg-[#f5f5f2] text-slate-900">
 
-    <header class="w-full z-50 bg-white shadow-sm border-b border-slate-100">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-['Playfair_Display'] font-bold text-blue-900">
+<body class="font-poppins bg-slate-50 text-slate-800 antialiased selection:bg-oceanBlue selection:text-white">
+
+    <header
+        class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm border-b border-lightBlue"
+        id="main-header">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-playfair font-bold text-deepBlue hover:opacity-80 transition">
                 La Fontanella
             </a>
-            
-            <button id="menu-toggle" class="lg:hidden text-2xl text-blue-900">
+
+            <button id="menu-toggle" class="lg:hidden text-2xl text-deepBlue focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
 
             <!-- Desktop Menu -->
-            <ul class="hidden lg:flex space-x-8 font-semibold text-sm uppercase tracking-wider">
-                <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
-                <li><a href="#chi-siamo" class="hover:text-blue-600 transition">Chi Siamo</a></li>
-                <li><a href="#servizi" class="hover:text-blue-600 transition">Servizi</a></li>
-                <li><a href="#laboratorio" class="hover:text-blue-600 transition">Laboratorio</a></li>
-                <li><a href="#contatti" class="hover:text-blue-600 transition">Contatti</a></li>
+            <ul class="hidden lg:flex space-x-10 font-medium text-sm uppercase tracking-widest text-slate-600">
+                <li><a href="#home" class="hover:text-oceanBlue transition relative group">Home<span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-oceanBlue transition-all duration-300 group-hover:w-full"></span></a>
+                </li>
+                <li><a href="#chi-siamo" class="hover:text-oceanBlue transition relative group">Chi Siamo<span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-oceanBlue transition-all duration-300 group-hover:w-full"></span></a>
+                </li>
+                <li><a href="#servizi" class="hover:text-oceanBlue transition relative group">Servizi<span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-oceanBlue transition-all duration-300 group-hover:w-full"></span></a>
+                </li>
+                <li><a href="#laboratorio" class="hover:text-oceanBlue transition relative group">Laboratorio<span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-oceanBlue transition-all duration-300 group-hover:w-full"></span></a>
+                </li>
+                <li><a href="#contatti" class="hover:text-oceanBlue transition relative group">Contatti<span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-oceanBlue transition-all duration-300 group-hover:w-full"></span></a>
+                </li>
             </ul>
 
-            <a href="tel:+39091474630" class="hidden lg:block border border-blue-900 text-blue-900 px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white transition">
-                Chiama Ora
+            <a href="tel:+39091474630"
+                class="hidden lg:inline-flex items-center gap-2 bg-deepBlue text-white px-6 py-2.5 rounded-full hover:bg-oceanBlue transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <i class="fas fa-phone-alt text-xs"></i> Chiama Ora
             </a>
         </nav>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 p-4 absolute w-full shadow-lg">
-            <ul class="flex flex-col space-y-4 font-semibold">
-                <li><a href="#home" class="block py-2">Home</a></li>
-                <li><a href="#chi-siamo" class="block py-2">Chi Siamo</a></li>
-                <li><a href="#servizi" class="block py-2">Servizi</a></li>
-                <li><a href="#laboratorio" class="block py-2">Laboratorio</a></li>
-                <li><a href="#contatti" class="block py-2">Contatti</a></li>
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-slate-100 p-6 absolute w-full shadow-2xl">
+            <ul class="flex flex-col space-y-6 font-semibold text-center">
+                <li><a href="#home" class="block py-2 text-deepBlue hover:text-oceanBlue">Home</a></li>
+                <li><a href="#chi-siamo" class="block py-2 text-deepBlue hover:text-oceanBlue">Chi Siamo</a></li>
+                <li><a href="#servizi" class="block py-2 text-deepBlue hover:text-oceanBlue">Servizi</a></li>
+                <li><a href="#laboratorio" class="block py-2 text-deepBlue hover:text-oceanBlue">Laboratorio</a></li>
+                <li><a href="#contatti" class="block py-2 text-deepBlue hover:text-oceanBlue">Contatti</a></li>
             </ul>
         </div>
     </header>
 
-    <section id="home" class="relative bg-slate-900 text-white">
+    <section id="home" class="relative h-screen min-h-[600px] bg-deepBlue text-white overflow-hidden">
         <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=1600" alt="Banco del pesce fresco" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/55"></div>
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=1600"
+                alt="Banco del pesce fresco" class="w-full h-full object-cover animate-slow-zoom">
+            <div class="absolute inset-0 bg-blue-900/60 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-deepBlue via-transparent to-transparent"></div>
         </div>
-        <div class="relative">
-            <div class="container mx-auto px-4 py-24 lg:py-32 flex flex-col items-center text-center">
-                <p class="text-xs md:text-sm tracking-[0.35em] uppercase text-blue-100 mb-4">Pescheria · Cucina · Aperifish</p>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-['Playfair_Display'] font-bold mb-5 max-w-3xl">
-                    Molto più di una pescheria, dal 1969.
+        <div class="relative h-full flex items-center justify-center">
+            <div class="container mx-auto px-4 text-center mt-16">
+                <p class="text-sm md:text-base tracking-[0.4em] uppercase text-sky-200 mb-6 animate-fade-in-up">
+                    Pescheria · Cucina · Aperifish</p>
+                <h1
+                    class="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-8 max-w-4xl mx-auto leading-tight animate-fade-in-up delay-100 text-white drop-shadow-lg">
+                    Il mare di Palermo,<br>
+                    <span class="text-sky-300">direttamente a tavola.</span>
                 </h1>
-                <p class="text-base md:text-lg text-slate-100/90 mb-8 max-w-2xl">
-                    Pesce freschissimo, piatti pronti dalla nostra cucina e un aperitivo sul mare
-                    alla periferia di Palermo, in uno storico luogo di famiglia.
+                <p
+                    class="text-lg md:text-xl text-slate-100 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200 drop-shadow-md">
+                    Dal 1969, portiamo la freschezza del Mediterraneo nella tua vita. Scopri il gusto autentico della
+                    nostra tradizione.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <a href="#servizi" class="inline-flex items-center justify-center bg-blue-900 text-white px-8 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-blue-800 transition">
-                        I nostri servizi
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+                    <a href="#servizi"
+                        class="inline-flex items-center justify-center bg-oceanBlue text-white px-10 py-4 rounded-full text-sm font-bold tracking-wider hover:bg-sky-400 transition-all duration-300 shadow-lg hover:shadow-sky-500/30 transform hover:-translate-y-1">
+                        I NOSTRI SERVIZI
                     </a>
-                    <a href="#contatti" class="inline-flex items-center justify-center bg-white/10 border border-white/40 text-white px-8 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-white/20 transition">
-                        Come arrivare
+                    <a href="#contatti"
+                        class="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-10 py-4 rounded-full text-sm font-bold tracking-wider hover:bg-white hover:text-deepBlue transition-all duration-300 transform hover:-translate-y-1">
+                        VIENI A TROVARCI
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="chi-siamo" class="py-16 bg-[#f5f5f2]">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1534080564607-c987d6666f00?auto=format&fit=crop&q=80&w=1000" alt="Tradizione Pescheria" class="rounded-3xl shadow-lg">
+    <section id="chi-siamo" class="py-24 bg-white relative overflow-hidden">
+        <!-- Subtle background element -->
+        <div
+            class="absolute top-0 left-0 w-96 h-96 bg-lightBlue rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2 opacity-60">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <div
+                        class="absolute top-4 -right-4 w-full h-full border-2 border-oceanBlue/20 rounded-3xl transform translate-x-2 -translate-y-2">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1534080564607-c987d6666f00?auto=format&fit=crop&q=80&w=1000"
+                        alt="Tradizione Pescheria"
+                        class="rounded-3xl shadow-2xl relative z-10 w-full object-cover aspect-[4/3] hover:scale-[1.01] transition-transform duration-500">
                 </div>
                 <div class="lg:w-1/2">
-                    <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">La nostra storia</h2>
-                    <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-5 text-slate-900">Una tradizione di famiglia dal 1969</h3>
-                    <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
-                        Alle porte a Sud Est della città di Palermo sorge la storica Pescheria “La Fontanella”: fondata nel 1969, si trova un tempo scenario dei famosissimi “Bagni Virzì”, in quel di Romagnolo. 
-                    </p>
-                    <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
-                        La pescheria deve il suo nome alle storiche “fontanelle” in ghisa che, un tempo, erogavano acqua potabile proprio nelle vicinanze di questo luogo impregnato di storia e passione. La tradizione storica della famiglia Richichi si fonde con il piacere della modernità.
-                    </p>
-                    <div class="mt-6 rounded-2xl bg-white border border-slate-200 px-5 py-4">
-                        <p class="italic text-slate-700 text-sm md:text-base">
-                            "A questo tonno, di voto, da zero a dieci, do quattordici! È pazzesco!"
+                    <span
+                        class="inline-block px-3 py-1 bg-lightBlue text-deepBlue text-xs font-bold uppercase tracking-widest rounded-full mb-4">La
+                        nostra storia</span>
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-8 text-deepBlue leading-tight">
+                        Una tradizione di famiglia <span class="text-oceanBlue">dal 1969.</span>
+                    </h2>
+                    <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
+                        <p>
+                            Alle porte a Sud Est della città di Palermo sorge la storica Pescheria <span
+                                class="font-semibold text-deepBlue">“La Fontanella”</span>. Situata dove un tempo
+                            sorgevano i famosissimi “Bagni Virzì” a Romagnolo, questo luogo è un punto di riferimento
+                            per chi ama il mare.
                         </p>
-                        <p class="font-semibold not-italic text-xs md:text-sm text-slate-500 mt-2">— Oscar Farinetti</p>
+                        <p>
+                            Il nome nasce dalle storiche fontanelle in ghisa che dissetavano il quartiere. Qui, la
+                            famiglia Richichi unisce ogni giorno il rispetto per la tradizione con una visione moderna
+                            della cucina di mare.
+                        </p>
+                    </div>
+
+                    <div
+                        class="mt-10 p-6 rounded-2xl bg-lightBlue/50 border-l-4 border-oceanBlue italic text-slate-700 relative">
+                        <i class="fas fa-quote-left text-2xl text-oceanBlue/20 absolute top-4 left-4 -z-10"></i>
+                        "A questo tonno, di voto, da zero a dieci, do quattordici! È pazzesco!"
+                        <p class="font-bold text-xs text-deepBlue mt-4 not-italic uppercase tracking-wider">— Oscar
+                            Farinetti</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="servizi" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Cosa facciamo</h2>
-                <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-4 text-slate-900">I servizi della Fontanella</h3>
-                <p class="text-sm md:text-base text-slate-600">
-                    Dalla scelta del pesce al piatto in tavola: quattro modi diversi di vivere il mare.
+    <section id="servizi" class="py-24 bg-slate-50 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-block px-3 py-1 bg-white border border-lightBlue text-deepBlue text-xs font-bold uppercase tracking-widest rounded-full mb-4 shadow-sm">Cosa
+                    Offriamo</span>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-deepBlue">I servizi della Fontanella
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Dalla scelta del pesce al piatto in tavola: quattro modi diversi di vivere il mare, pensati per ogni
+                    tua esigenza.
                 </p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left hover:shadow-md hover:-translate-y-1 transition-transform transition-shadow duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
-                            <i class="fas fa-fish"></i>
-                        </div>
-                        <div>
-                            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700 mb-1">01 · Pescheria</p>
-                            <h4 class="text-lg font-semibold text-slate-900">Il banco del pesce</h4>
-                        </div>
+                <!-- Card 1 -->
+                <div
+                    class="group bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-oceanBlue/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-lightBlue text-deepBlue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-deepBlue group-hover:text-lightBlue transition-colors duration-300">
+                        <i class="fas fa-fish"></i>
                     </div>
-                    <p class="text-slate-600 text-sm leading-relaxed">Selezione quotidiana di pesce fresco, consigli su tagli, cotture e abbinamenti.</p>
-                </div>
-                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left hover:shadow-md hover:-translate-y-1 transition-transform transition-shadow duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div>
-                            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700 mb-1">02 · Laboratorio</p>
-                            <h4 class="text-lg font-semibold text-slate-900">Cucina di mare pronta</h4>
-                        </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-oceanBlue mb-2 block">01 ·
+                            Freschezza</span>
+                        <h3 class="text-xl font-bold text-deepBlue">Pescheria</h3>
                     </div>
-                    <p class="text-slate-600 text-sm leading-relaxed">Preparati e piatti pronti di pesce, cucinati ogni mattina nel nostro laboratorio.</p>
-                </div>
-                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left hover:shadow-md hover:-translate-y-1 transition-transform transition-shadow duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
-                            <i class="fas fa-chair"></i>
-                        </div>
-                        <div>
-                            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700 mb-1">03 · Pranzo</p>
-                            <h4 class="text-lg font-semibold text-slate-900">Pranzo in pescheria</h4>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 text-sm leading-relaxed">Tavoli apparecchiati tra i profumi del mare, per un pranzo informale ma curato.</p>
-                </div>
-                <div class="bg-[#f9f7f3] p-7 rounded-2xl border border-slate-100 text-left hover:shadow-md hover:-translate-y-1 transition-transform transition-shadow duration-300">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
-                            <i class="fas fa-glass-cheers"></i>
-                        </div>
-                        <div>
-                            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700 mb-1">04 · Aperifish</p>
-                            <h4 class="text-lg font-semibold text-slate-900">Aperitivo di mare</h4>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 text-sm leading-relaxed">Finger food, crudi e fritti croccanti accompagnati da una selezione di vini siciliani.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="laboratorio" class="py-16 bg-[#f5f5f2]">
-        <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Gusto e comodità</h2>
-                    <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-5 text-slate-900">Il laboratorio di cucina</h3>
-                    <p class="text-slate-700 leading-relaxed mb-4 text-sm md:text-base">
-                        Nel nostro laboratorio trasformiamo il pescato del giorno in piatti pronti, curati come al ristorante ma pensati per casa tua.
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Selezione quotidiana del miglior pescato locale. Arrivi giornalieri e consigli esperti su tagli
+                        e cotture.
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="bg-white rounded-2xl border border-slate-200 p-4">
-                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 mb-2">Preparati di mare</p>
-                            <p class="text-sm text-slate-700">Caponata di pesce spada, insalate di mare e secondi già pronti.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-oceanBlue/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-lightBlue text-deepBlue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-deepBlue group-hover:text-lightBlue transition-colors duration-300">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-oceanBlue mb-2 block">02 ·
+                            Comodità</span>
+                        <h3 class="text-xl font-bold text-deepBlue">Laboratorio</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Cucina di mare pronta da gustare. Pronti a cuocere e gastronomia fresca preparata ogni mattina.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-oceanBlue/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-lightBlue text-deepBlue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-deepBlue group-hover:text-lightBlue transition-colors duration-300">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-oceanBlue mb-2 block">03 ·
+                            Esperienza</span>
+                        <h3 class="text-xl font-bold text-deepBlue">Pranzo</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tavoli apparecchiati tra i profumi del mare. Un pranzo informale ma curato in ogni dettaglio.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="group bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-oceanBlue/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-lightBlue text-deepBlue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-deepBlue group-hover:text-lightBlue transition-colors duration-300">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-oceanBlue mb-2 block">04 ·
+                            Relax</span>
+                        <h3 class="text-xl font-bold text-deepBlue">Aperifish</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Il fine settimana si accende con i nostri aperitivi. Finger food, crudi e ottimi vini siciliani.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="laboratorio" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span
+                        class="inline-block px-3 py-1 bg-lightBlue text-deepBlue text-xs font-bold uppercase tracking-widest rounded-full mb-4">Gusto
+                        e comodità</span>
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-deepBlue">Il laboratorio di cucina
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed mb-10 text-lg">
+                        Nel nostro laboratorio trasformiamo il pescato del giorno in piatti pronti, curati con la stessa
+                        attenzione che metteresti tu, ma con la nostra esperienza.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                        <div
+                            class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-oceanBlue/30 transition-colors">
+                            <h4 class="font-playfair font-bold text-xl text-deepBlue mb-2">Preparati</h4>
+                            <p class="text-sm text-slate-500">Caponata di pesce spada, insalate di mare fresche e sughi
+                                pronti.</p>
                         </div>
-                        <div class="bg-white rounded-2xl border border-slate-200 p-4">
-                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 mb-2">Pronti da cuocere</p>
-                            <p class="text-sm text-slate-700">Involtini, gratinati e specialità che vanno solo in forno.</p>
+                        <div
+                            class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-oceanBlue/30 transition-colors">
+                            <h4 class="font-playfair font-bold text-xl text-deepBlue mb-2">Da Cuocere</h4>
+                            <p class="text-sm text-slate-500">Involtini siciliani, gratinati e specialità pronte per il
+                                forno.</p>
                         </div>
-                        <div class="bg-white rounded-2xl border border-slate-200 p-4">
-                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 mb-2">Qualità quotidiana</p>
-                            <p class="text-sm text-slate-700">Ingredienti freschi, ricette di famiglia, lavorazione artigianale.</p>
+                        <div
+                            class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-oceanBlue/30 transition-colors">
+                            <h4 class="font-playfair font-bold text-xl text-deepBlue mb-2">Qualità</h4>
+                            <p class="text-sm text-slate-500">Solo ingredienti freschi, nessuna lavorazione industriale.
+                            </p>
                         </div>
-                        <div class="bg-white rounded-2xl border border-slate-200 p-4">
-                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 mb-2">Zero pensieri</p>
-                            <p class="text-sm text-slate-700">Tu apparecchi, al resto pensiamo noi.</p>
+                        <div
+                            class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-oceanBlue/30 transition-colors">
+                            <h4 class="font-playfair font-bold text-xl text-deepBlue mb-2">Zero Pensieri</h4>
+                            <p class="text-sm text-slate-500">Tu apparecchi la tavola, al resto pensiamo noi.</p>
                         </div>
                     </div>
-                    <p class="text-xs md:text-sm text-slate-500 uppercase tracking-[0.2em]">Ogni mattina, tutto preparato sul momento.</p>
+
+                    <div class="flex items-center gap-4 text-slate-500 text-sm font-medium uppercase tracking-wider">
+                        <i class="fas fa-check-circle text-oceanBlue"></i>
+                        Ogni mattina, tutto preparato sul momento.
+                    </div>
                 </div>
-                <div class="relative">
-                    <div class="rounded-3xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&q=80&w=1000" alt="Preparati di pesce" class="w-full h-full object-cover">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-oceanBlue/20 rounded-[2.5rem] blur-xl opacity-30"></div>
+                    <div class="rounded-[2rem] overflow-hidden shadow-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&q=80&w=1000"
+                            alt="Preparati di pesce"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-14 bg-blue-900 text-white text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-6">Vuoi prenotare un tavolo per pranzo?</h2>
-            <p class="text-xl mb-8 opacity-90">Chiamaci per assicurarti il tuo posto a sedere!</p>
-            <a href="tel:+39091474630" class="bg-white text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-slate-100 transition inline-block">
-                <i class="fas fa-phone mr-2"></i> 091 474630
+    <section class="py-20 bg-deepBlue text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/fish-net.png')]">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-white">Vuoi assaporare il mare?</h2>
+            <p class="text-xl mb-10 text-slate-300 max-w-2xl mx-auto">Prenota il tuo tavolo per pranzo o passa a
+                trovarci per un aperitivo indimenticabile.</p>
+            <a href="tel:+39091474630"
+                class="inline-block bg-oceanBlue text-white px-12 py-5 rounded-full text-lg font-bold hover:bg-sky-500 transition-all duration-300 shadow-xl hover:shadow-sky-500/40 transform hover:-translate-y-1">
+                <i class="fas fa-phone mr-3"></i> PRENOTA ORA: 091 474630
             </a>
         </div>
     </section>
 
-    <section id="contatti" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <section id="contatti" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <div>
-                    <h2 class="text-blue-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Dove trovarci</h2>
-                    <h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-8 text-slate-900">Contatti e orari</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="text-blue-600 text-xl mr-4 mt-1"><i class="fas fa-map-marker-alt"></i></div>
+                    <span
+                        class="inline-block px-3 py-1 bg-lightBlue text-deepBlue text-xs font-bold uppercase tracking-widest rounded-full mb-4">Dove
+                        Siamo</span>
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-10 text-deepBlue">Contatti e orari</h2>
+
+                    <div class="space-y-8">
+                        <div
+                            class="flex items-start p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-oceanBlue/20 transition duration-300">
+                            <div class="text-oceanBlue text-2xl mr-6 mt-1 flex-shrink-0"><i
+                                    class="fas fa-map-marker-alt"></i></div>
                             <div>
-                                <h4 class="font-bold">Indirizzo</h4>
-                                <p class="text-slate-600">Via Messina Marine, 287, 90123 Palermo (PA)</p>
+                                <h4 class="font-bold text-deepBlue text-lg mb-1">Indirizzo</h4>
+                                <p class="text-slate-600">Via Messina Marine, 287,<br>90123 Palermo (PA)</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="text-blue-600 text-xl mr-4 mt-1"><i class="fas fa-phone"></i></div>
+                        <div
+                            class="flex items-start p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-oceanBlue/20 transition duration-300">
+                            <div class="text-oceanBlue text-2xl mr-6 mt-1 flex-shrink-0"><i class="fas fa-phone"></i>
+                            </div>
                             <div>
-                                <h4 class="font-bold">Telefono</h4>
-                                <p class="text-slate-600">091 474630 / 393 3310716</p>
+                                <h4 class="font-bold text-deepBlue text-lg mb-1">Telefono</h4>
+                                <p class="text-slate-600 font-lg">091 474630<br>393 3310716</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="text-blue-600 text-xl mr-4 mt-1"><i class="fab fa-instagram"></i></div>
-                            <div>
-                                <h4 class="font-bold">Instagram</h4>
-                                <a href="https://www.instagram.com/pescherialafontanella/" class="text-blue-600 hover:underline">@pescherialafontanella</a>
+                        <div
+                            class="flex items-start p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-oceanBlue/20 transition duration-300">
+                            <div class="text-oceanBlue text-2xl mr-6 mt-1 flex-shrink-0"><i class="fas fa-clock"></i>
                             </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-blue-600 text-xl mr-4 mt-1"><i class="fas fa-clock"></i></div>
                             <div>
-                                <h4 class="font-bold">Orari di Apertura</h4>
-                                <p class="text-slate-600">Pescheria: 07:30 - 14:00</p>
-                                <p class="text-slate-600">Pranzo: 12:00 - 14:30</p>
-                                <p class="text-slate-600">Aperifish: dalle 19:00 (Ven-Sab)</p>
+                                <h4 class="font-bold text-deepBlue text-lg mb-1">Orari di Apertura</h4>
+                                <ul class="text-slate-600 space-y-1">
+                                    <li><span class="font-semibold text-deepBlue/80">Pescheria:</span> 07:30 - 14:00
+                                    </li>
+                                    <li><span class="font-semibold text-deepBlue/80">Pranzo:</span> 12:00 - 14:30</li>
+                                    <li><span class="font-semibold text-deepBlue/80">Aperifish:</span> dalle 19:00
+                                        (Ven-Sab)</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="h-[400px] bg-slate-100 rounded-2xl overflow-hidden border border-slate-200">
+                <div class="h-[500px] bg-slate-100 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3139.5073281766363!2d13.386248775485443!3d38.10513007190395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319e5bb6b03e5b5%3A0xd0034225c86af46b!2sPescheria%20La%20Fontanella!5e0!3m2!1sit!2sit!4v1771232780468!5m2!1sit!2sit"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="grayscale hover:grayscale-0 transition-all duration-700">
                     </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white text-slate-500 py-8 border-t border-slate-200">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-2xl font-['Playfair_Display'] font-bold text-slate-900 mb-3">La Fontanella</h2>
-            <p class="mb-6 max-w-md mx-auto text-sm">Il gusto autentico del mare siciliano, servito con passione dal 1969.</p>
-            <div class="flex justify-center space-x-6 mb-6 text-slate-500">
-                <a href="#" class="hover:text-slate-800 transition text-xl"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/pescherialafontanella/" class="hover:text-slate-800 transition text-xl"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-slate-800 transition text-xl"><i class="fab fa-whatsapp"></i></a>
+    <footer class="bg-deepBlue text-slate-300 py-16 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 text-center md:text-left mb-12">
+                <div>
+                    <h2 class="text-3xl font-playfair font-bold text-white mb-4">La Fontanella</h2>
+                    <p class="text-sm leading-relaxed opacity-80 max-w-xs mx-auto md:mx-0">
+                        Il punto di riferimento per il pesce fresco a Palermo. Tradizione, qualità e passione dal 1969.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Link Rapidi</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="hover:text-oceanBlue transition">Home</a></li>
+                        <li><a href="#chi-siamo" class="hover:text-oceanBlue transition">Chi Siamo</a></li>
+                        <li><a href="#servizi" class="hover:text-oceanBlue transition">Servizi</a></li>
+                        <li><a href="#contatti" class="hover:text-oceanBlue transition">Contatti</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Social</h4>
+                    <div class="flex justify-center md:justify-start space-x-6">
+                        <a href="#"
+                            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-oceanBlue hover:text-white transition-all transform hover:scale-110"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/pescherialafontanella/"
+                            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-oceanBlue hover:text-white transition-all transform hover:scale-110"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/393933310716"
+                            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-oceanBlue hover:text-white transition-all transform hover:scale-110"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="text-xs md:text-sm border-t border-slate-200 pt-4 flex flex-col md:flex-row items-center justify-center gap-2">
-                <span>&copy; 2026 Pescheria La Fontanella. Tutti i diritti riservati.</span>
-                <span class="hidden md:inline mx-2 text-slate-300">•</span>
-                <span class="text-slate-500">
-                    Web by
-                    <a href="https://www.instagram.com/_matteomarino/" target="_blank" rel="noopener noreferrer" class="text-slate-800 hover:text-blue-700 font-medium">
+
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400">
+                <p>&copy; 2026 Pescheria La Fontanella. Tutti i diritti riservati.</p>
+                <div class="mt-4 md:mt-0">
+                    <span class="mr-1">Designed by</span>
+                    <a href="https://www.instagram.com/_matteomarino/" target="_blank" rel="noopener noreferrer"
+                        class="text-white hover:text-oceanBlue font-medium transition">
                         Matteo Marino
                     </a>
-                </span>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
